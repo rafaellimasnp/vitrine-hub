@@ -69,9 +69,11 @@ function loadFromLocalStorage<T>(key: string, fallback: T): T {
 }
 
 const App = () => {
-  const [produtos, setprodutos] = useState<Produto[]>(() =>
-    loadFromLocalStorage<Produto[]>(produtos_KEY, initialprodutos)
-  );
+  const [produtos, setprodutos] = useState<Produto[]>(() => {
+    const dados = loadFromLocalStorage<Produto[]>(produtos_KEY, initialprodutos);  
+    return dados.length > 0 ? dados : initialprodutos;
+  });
+
   const [carrinho, setcarrinho] = useState<carrinhoItem[]>(() =>
     loadFromLocalStorage<carrinhoItem[]>(carrinho_KEY, [])
   );
