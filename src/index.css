@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  /* fundo geral */
+  --fundo-corpo: #f5f5f7;        /* cinza bem claro */
+  --fundo-cartao: #ffffff;       /* cards brancos */
+  --borda-cartao: #e5e7eb;       /* borda cinza suave */
+
+  /* textos */
+  --texto-principal: #111827;    /* quase preto */
+  --texto-secundario: #6b7280;   /* cinza para descrições */
+  --texto-suave: #9ca3af;        /* cinza bem clarinho */
+
+  /* cor principal estilo FOOD-E (verde/agua) */
+  --cor-primaria: #18c29c;
+  --cor-primaria-hover: #15aa88;
+  --cor-primaria-suave: #d1fae5;
+
+  /* cor de alerta */
+  --cor-alerta: #ef4444;
+  --cor-alerta-suave: #fee2e2;
+
+  /* extras */
+  --raio-grande: 1rem;
+  --sombra-suave: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+/* aplica no body (não precisa de Tailwind aqui) */
+body {
+  margin: 0;
+  background: var(--fundo-corpo);
+  color: var(--texto-principal);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
